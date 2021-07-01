@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Image from './image.js'
+import TimeRead from './TimeRead';
+import Title from './title.js'
+import Views from './views';
 
 function App() {
+
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style={{ backgroundColor: "#f2f2f2", width: "250px", minHeight: "475px", margin: "10% 10%"}}>
+      <Image/>
+      <Title/>
+      <div className='rowC'>
+        <div style={{float:'left'}}>
+        <TimeRead/>
+        </div>
+        <div style={{float:'right',paddingRight:"10px"}}>
+        <Views/>
+        </div>
+        <h2 style={{float:'right',paddingRight:"10px"}}>...</h2>
+      </div>
+      </div>
+      
     </div>
-  );
+  ); 
 }
 
 export default App;
